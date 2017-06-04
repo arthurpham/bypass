@@ -112,7 +112,7 @@ chrome.webRequest.onBeforeSendHeaders.addListener(function(details) {
   // if referer exists, set it to google
   requestHeaders = requestHeaders.map(function(requestHeader) {
     if (requestHeader.name === 'Referer') {
-      requestHeader.value = 'https://www.google.com/';
+      requestHeader.value = 'https://www.facebook.com/';
       setReferer = true;
     }
     return requestHeader;
@@ -122,7 +122,7 @@ chrome.webRequest.onBeforeSendHeaders.addListener(function(details) {
   if (!setReferer) {
     requestHeaders.push({
       name: 'Referer',
-      value: 'https://www.google.com/'
+      value: 'https://www.facebook.com/'
     });
   }
 
